@@ -10,14 +10,14 @@
             case 1:
                 return 'is-12';
             case 2:
-                return 'is-8-tablet is-8-desktop is-8-widescreen';
+                return 'is-10-tablet is-10-desktop is-10-widescreen';
             case 3:
-                return 'is-8-tablet is-8-desktop is-6-widescreen'
+                return 'is-10-tablet is-10-desktop is-8-widescreen'
         }
         return '';
     } %>
     <section class="section">
-        <div class="container">
+        <div class="container-fluid">
             <div class="columns">
                 <div class="column <%= main_column_class() %> has-order-2 column-main"><%- body %></div>
                 <%- partial('common/widget', { position: 'left' }) %>
