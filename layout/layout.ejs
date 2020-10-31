@@ -10,7 +10,7 @@
             case 1:
                 return 'is-12';
             case 2:
-                return 'is-10-tablet is-10-desktop is-10-widescreen';
+                return 'is-9-tablet is-9-desktop is-9-widescreen';
             case 3:
                 return 'is-10-tablet is-10-desktop is-8-widescreen'
         }
@@ -18,6 +18,11 @@
     } %>
     <section class="section">
         <div class="container-fluid">
+            <div class="columns">
+                <div id="centreAds" style="margin: auto;">
+                    <%- partial('widget/centerAdvertisment', { position: 'centre' }) %>
+                </div> 
+            </div>
             <div class="columns">
                 <div class="column <%= main_column_class() %> has-order-2 column-main"><%- body %></div>
                 <%- partial('common/widget', { position: 'left' }) %>

@@ -44,6 +44,7 @@
                 <%= post.title %>
             <% } %>
         </h1>
+        <%- partial('author.ejs') %>
         <div class="content">
             <%- index && post.excerpt ? post.excerpt : post.content %>
         </div>
@@ -116,7 +117,7 @@
 </div>
 <% } %>
 
-<% if (!index && has_config('comment.type')) { %>
+<% if (!index && has_config('comment.type') && comment) { %>
 <div class="card">
     <div class="card-content">
         <h3 class="title is-5 has-text-weight-normal"><%= __('article.comments') %></h3>
